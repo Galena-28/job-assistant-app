@@ -1,6 +1,6 @@
 # Build progress
 
-- [ ] **Stage 1 — Learn the basics** *(in progress, started Nov 11, 2026)*: practice page built (`index.html`); exercises 1–3 done (blue color, Clear button, remember skills)
+- [ ] **Stage 1 — Learn the basics** *(in progress, started Nov 11, 2026)*: practice page built (`index.html`); all 4 exercises done (blue color, Clear button, remember skills, "Strong match" label)
 - [ ] Stage 2 — A "just for me" version: upload CV/profile, paste an advert, get a match score plus a tailored CV and cover letter
 - [ ] Stage 3 — Tracker: save each job and its status
 - [ ] Stage 4 — Daily job search: one job source, run every morning
