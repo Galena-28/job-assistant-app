@@ -16,7 +16,7 @@ It is deliberately tiny, so you can see how every part works before the app grow
 1. You paste a job advert into the big box.
 2. You type your skills, separated by commas.
 3. You press **Check my match**.
-4. The page shows a score out of 10, the skills the advert mentions (green), and the ones it doesn't (orange).
+4. The page shows a score out of 10, the skills the advert mentions (blue), and the ones it doesn't (orange).
 
 It doesn't use AI yet. It just looks for your exact words in the advert. In Stage 2 the Claude API will replace this simple word check with a real reading of the advert.
 
@@ -51,7 +51,7 @@ Each section of `index.html` has comments (lines starting with `<!--`, `/*` or `
 
 Do these one at a time, as your plan's tips suggest:
 
-1. "Change the green color to blue." *(Learn: CSS variables in `:root`)*
+1. ✅ "Change the green color to blue." *(Learn: CSS variables in `:root`)*
 2. "Add a Clear button that empties both boxes." *(Learn: a second button and click listener)*
 3. "Remember my skills when I reload the page." *(Learn: saving in the browser)*
 4. "Show a message like 'Strong match' when the score is 7 or more." *(Learn: if/else)*
