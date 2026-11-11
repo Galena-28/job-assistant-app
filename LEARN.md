@@ -53,7 +53,7 @@ Do these one at a time, as your plan's tips suggest:
 
 1. ✅ "Change the green color to blue." *(Learn: CSS variables in `:root`)*
 2. ✅ "Add a Clear button that empties both boxes." *(Learn: a second button and click listener)*
-3. "Remember my skills when I reload the page." *(Learn: saving in the browser)*
+3. ✅ "Remember my skills when I reload the page." *(Learn: saving in the browser)*
 4. "Show a message like 'Strong match' when the score is 7 or more." *(Learn: if/else)*
 
 After each one works, ask Claude to **save a version** (a git commit), so you can always go back.

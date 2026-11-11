@@ -164,6 +164,22 @@
     const skills  = document.getElementById("skills");
     const result  = document.getElementById("result");
 
+    // REMEMBER MY SKILLS
+    // The browser has a small notebook for each website, called localStorage.
+    // It stays on this device only. We write the skills into it, and read
+    // them back when the page opens. "try/catch" means: if the notebook is
+    // not available (for example in a private window), carry on without it.
+    const SAVED_SKILLS = "jobMatch.skills";
+
+    try {
+      skills.value = localStorage.getItem(SAVED_SKILLS) || "";
+    } catch (e) { /* no notebook available: start with an empty box */ }
+
+    // Save the skills every time they change (on each key press)
+    skills.addEventListener("input", function () {
+      try { localStorage.setItem(SAVED_SKILLS, skills.value); } catch (e) {}
+    });
+
     // 2. Say what should happen when the button is clicked
     button.addEventListener("click", function () {
       const advertText = advert.value.toLowerCase();
@@ -201,6 +217,7 @@
     document.getElementById("clear").addEventListener("click", function () {
       advert.value = "";
       skills.value = "";
+      try { localStorage.removeItem(SAVED_SKILLS); } catch (e) {}  // forget saved skills too
       result.classList.add("hidden");
       advert.focus();
     });
