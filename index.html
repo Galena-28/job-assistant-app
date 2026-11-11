@@ -91,6 +91,17 @@
     }
     @media (prefers-color-scheme: dark) { button { color: #0b1a33; } }
 
+    /* Put the two buttons in a row; "Check" gets more room than "Clear" */
+    .buttons { display: flex; gap: 10px; }
+    .buttons #check { flex: 2; }
+    .buttons #clear { flex: 1; }
+
+    /* A quieter, outlined style for less important buttons */
+    button.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
     .score { font-size: 2.4rem; font-weight: 700; margin: 0; }
     .tag {
       display: inline-block;
@@ -126,7 +137,11 @@
       </label>
       <input id="skills" placeholder="e.g. Excel, reporting, project management">
 
-      <button id="check">Check my match</button>
+      <!-- Two buttons side by side -->
+      <div class="buttons">
+        <button id="check">Check my match</button>
+        <button id="clear" class="secondary" type="button">Clear</button>
+      </div>
     </section>
 
     <!-- Box 2: the result. Hidden until the button is pressed. -->
@@ -179,6 +194,15 @@
       document.getElementById("found").innerHTML = makeTags(found, "found");
       document.getElementById("missing").innerHTML = makeTags(missing, "missing");
       result.classList.remove("hidden");
+    });
+
+    // 6. The Clear button: empty both boxes, hide the old result,
+    //    and put the cursor back in the advert box, ready for the next job
+    document.getElementById("clear").addEventListener("click", function () {
+      advert.value = "";
+      skills.value = "";
+      result.classList.add("hidden");
+      advert.focus();
     });
 
     // Helper: turns a list of words into colored "pill" labels
