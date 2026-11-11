@@ -65,7 +65,7 @@ If something breaks, you can return to any earlier snapshot. This folder already
 
 ## Stage 1 is done when you can
 
-- [ ] Open the page and use it on your phone and computer
-- [ ] Point to the HTML, CSS and JavaScript parts and say what each does
-- [ ] Complete at least two of the exercises above with Claude Code
-- [ ] Save a version after each one
+- [x] Open the page and use it on your phone and computer
+- [x] Point to the HTML, CSS and JavaScript parts and say what each does
+- [x] Complete at least two of the exercises above with Claude Code
+- [x] Save a version after each one
